@@ -5,11 +5,11 @@ export class Router {
         this.routes[routeName] = page
     }
 
-    route(ev) {
-        ev = ev || window.ev
-        ev.preventDefault()
+    route(e) {
+        e = e || window.e
+        e.preventDefault()
     
-        window.history.pushState({}, "", ev.target.href)
+        window.history.pushState({}, "", e.target.href)
     
         this.handle()
     }
